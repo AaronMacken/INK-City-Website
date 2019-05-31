@@ -77,6 +77,11 @@ h2:after {
     margin-top: 30px;
 }
 
+h3 {
+    font-size: 110%;
+    margin-bottom: 15px;
+}
+
 /* ------- BUTTONS ------ */
 
 .btn:link,
@@ -201,12 +206,37 @@ header {
     width: 75vw;
     margin-top: 30px;
     display: grid;
-    grid-template-columns: 20% 20% 20% 20%;
+    grid-template-columns: 33% 33% 33%;
     grid-column-gap: 5%;
 }
 
-.featuresGrid div {
-    background: pink;
+.featuresGrid div{
+    text-align: center;
+}
+
+.featuresGrid i {
+    font-size: 300%;
+    display: block;
+    color: #8e44ad;
+}
+
+.featuresGrid div:last-of-type i{
+    display: inline-block;
+    font-size: 100%;
+    margin-top: 30px;
+}
+
+.featuresGrid h3 {
+    margin-top: 15px;
+}
+
+.featuresGrid div:last-of-type h3 {
+    margin-top: 25px;
+}
+
+.featuresGrid p{
+    line-height: 145%;
+    font-size: 90%;
 }
 
 
