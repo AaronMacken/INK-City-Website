@@ -23,24 +23,26 @@ body {
   font-size: 20px;
 }
 
-.clearfix {zoom: 1;}
+.clearfix {
+  zoom: 1;
+}
 .clearfix:after {
-    content: '.';
-    clear: both;
-    display: block;
-    height: 0;
-    visibility: hidden;
+  content: ".";
+  clear: both;
+  display: block;
+  height: 0;
+  visibility: hidden;
 }
 
 /* ------ REUSABLE COMPONENTS ------ */
 
 .row {
-    width: 1140px;
-    margin: 0 auto;
+  width: 1140px;
+  margin: 0 auto;
 }
 
 section {
-    padding: 80px 0;
+  padding: 80px 0;
 }
 
 /* ------ HEADINGS ------ */
@@ -60,26 +62,26 @@ h1 {
 }
 
 h2 {
-    font-size: 170%;
-    text-align: center;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    margin-bottom: 30px;
+  font-size: 170%;
+  text-align: center;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
 }
 
 h2:after {
-    display: block;
-    height: 2px;
-    background-color: #8e44ad;
-    content: " ";
-    width: 100px;
-    margin: 0 auto;
-    margin-top: 30px;
+  display: block;
+  height: 2px;
+  background-color: #8e44ad;
+  content: " ";
+  width: 100px;
+  margin: 0 auto;
+  margin-top: 30px;
 }
 
 h3 {
-    font-size: 110%;
-    margin-bottom: 15px;
+  font-size: 110%;
+  margin-bottom: 15px;
 }
 
 /* ------- BUTTONS ------ */
@@ -97,34 +99,33 @@ h3 {
 
 .btn-full:link,
 .btn-full:visited {
-    background-color: #8e44ad;
-    border: 1px solid #8e44ad;
-    color: #fff;
-    margin-right: 15px;
+  background-color: #8e44ad;
+  border: 1px solid #8e44ad;
+  color: #fff;
+  margin-right: 15px;
 }
 
 .btn-ghost:link,
 .btn-ghost:visited {
-    border: 1px solid #8e44ad;
-    color: #fff;
+  border: 1px solid #8e44ad;
+  color: #fff;
 }
 
 .btn:hover,
 .btn:active {
-    background-color: #7a3a95;
+  background-color: #7a3a95;
 }
 
 .btn-full:hover,
 .btn-full:active {
-    border: 1px solid #7a3a95;
+  border: 1px solid #7a3a95;
 }
 
 .btn-ghost:hover,
 .btn-ghost:active {
-    border: 1px solid #7a3a95;
-    color: #fff;
+  border: 1px solid #7a3a95;
+  color: #fff;
 }
-
 
 /* ------ HEADER ------ */
 
@@ -156,88 +157,148 @@ header {
 }
 
 .logo {
-    height: 100px;
-    width: auto;
-    float: left;
-    margin-top: 20px;
+  height: 100px;
+  width: auto;
+  float: left;
+  margin-top: 20px;
 }
 
 /* ------ Main Nav ------ */
 
 .main-nav {
-    float: right;
-    list-style: none;
-    margin-top: 55px;
+  float: right;
+  list-style: none;
+  margin-top: 55px;
 }
 
 .main-nav li {
-    display: inline-block;
-    margin-left: 50px;
+  display: inline-block;
+  margin-left: 50px;
 }
 
 .main-nav li a:link,
 .main-nav li a:visited {
-    padding: 8px 0;
-    color: #fff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 90%;
-    border-bottom: 2px solid transparent;
-    -webkit-transition: border-bottom 0.2s;
-    transition: border-bootom 0.2s;
+  padding: 8px 0;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 90%;
+  border-bottom: 2px solid transparent;
+  -webkit-transition: border-bottom 0.2s;
+  transition: border-bootom 0.2s;
 }
 
 .main-nav li a:hover,
 .main-nav li a:active {
-    border-bottom: 2px solid #8e44ad;
+  border-bottom: 2px solid #8e44ad;
 }
 
 /* ------ Features Section ------ */
 
 .features-description {
-    line-height: 145%;
-    width: 70%;
-    margin-left: 15%;
-    font-size: 103%;
+  line-height: 145%;
+  width: 70%;
+  margin-left: 15%;
+  font-size: 103%;
 }
 
 .featuresGrid {
-    height: 25vh;
-    width: 75vw;
-    margin-top: 30px;
-    display: grid;
-    grid-template-columns: 33% 33% 33%;
-    grid-column-gap: 5%;
+  height: 25vh;
+  width: 75vw;
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 5%;
 }
 
-.featuresGrid div{
-    text-align: center;
+.featuresGrid div {
+  text-align: center;
 }
 
 .featuresGrid i {
-    font-size: 300%;
-    display: block;
-    color: #8e44ad;
+  font-size: 300%;
+  display: block;
+  color: #8e44ad;
 }
 
-.featuresGrid div:last-of-type i{
-    display: inline-block;
-    font-size: 100%;
-    margin-top: 30px;
+.featuresGrid div:last-of-type i {
+  display: inline-block;
+  font-size: 100%;
+  margin-top: 30px;
 }
 
 .featuresGrid h3 {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .featuresGrid div:last-of-type h3 {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
-.featuresGrid p{
-    line-height: 145%;
-    font-size: 90%;
+.featuresGrid p {
+  line-height: 145%;
+  font-size: 90%;
+}
+
+/* ------ Image Grid ------ */
+
+.imageGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.imageGrid figure {
+  width: 100%;
+  margin: 0;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.imageGrid img {
+  opacity: 0.7;
+  width: 100%;
+  height:100%;
+  -webkit-transform: scale(1.15);
+  -ms-transform: scale(1.15);
+  transform: scale(1.15);
+  -webkit-transition: -webkit-transform 0.5s, opacity 0.5s;
+  transition: transform 0.5s, opacity 0.5s;
+}
+
+.imageGrid img:hover {
+  opacity: 1;
+  -webkit-transform: scale(1.03);
+  -ms-transform: scale(1.03);
+  transform: scale(1.03);
+}
+
+.gridItem1 {
+  height: 30vh;
+  grid-row: 1/2;
+  grid-column: 1/2;
 }
 
 
+.gridItem2 {
+  height: 30vh;
+  grid-row: 1/2;
+  grid-column: 2/3;
+}
 
+.gridItem3 {
+  height: 60vh;
+  grid-row: 1/3;
+  grid-column: 3/4;
+}
+
+.gridItem4 {
+  height: 30vh;
+  grid-row: 2/3;
+  grid-column: 1/3;
+}
+
+.gridItem4 img {
+    object-fit: cover;
+    object-position: center;
+   
+}
