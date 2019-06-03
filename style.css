@@ -3,8 +3,7 @@
 
     #7a3a95
 
-
-    #ecf0f1
+    #f4f4f4
 */
 
 /* ------ BASIC SETUP ------ */
@@ -245,6 +244,7 @@ header {
 .imageGrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  padding-bottom: 0;
 }
 
 .imageGrid figure {
@@ -300,5 +300,55 @@ header {
 .gridItem4 img {
     object-fit: cover;
     object-position: center;
-   
+}
+
+/* ------ How It Works Section ------ */
+.section-how {
+  background-color: #f4f4f4;
+}
+
+.section-how img {
+  height: 30vh;
+  width: 30vw;
+  object-fit: scale-down;
+  margin-top: 30px;
+}
+
+.howGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+}
+
+.step {
+  margin-bottom: 50px;
+}
+
+.step:first-of-type {
+  margin-bottom: 60px;
+}
+
+.step p {
+  padding-top: 0;
+}
+
+.step:first-of-type p{
+  padding-top: 13px;
+  
+}
+
+
+
+.step div {
+  color: #8e44ad;
+  font-size: 150%;
+  height: 50px;
+  width: 50px;
+  border: 2px solid #8e44ad;
+  border-radius: 50%;
+  text-align: center;
+  float: left;
+  padding: 5px;
+  display: inline-block;
+  margin-right: 25px
 }
