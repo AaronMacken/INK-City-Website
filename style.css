@@ -324,9 +324,7 @@ header {
   margin-bottom: 50px;
 }
 
-.step:first-of-type {
-  margin-bottom: 60px;
-}
+
 
 .step p {
   padding-top: 0;
@@ -337,18 +335,31 @@ header {
   
 }
 
-
-
 .step div {
   color: #8e44ad;
   font-size: 150%;
-  height: 50px;
-  width: 50px;
+  height: 60px;
+  width: 60px;
   border: 2px solid #8e44ad;
   border-radius: 50%;
   text-align: center;
   float: left;
-  padding: 5px;
+  padding: 7px;
   display: inline-block;
   margin-right: 25px
+}
+
+.appIconGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.app-icon img{
+  height: 50px;
+  width: auto;
+}
+
+.app-icon:last-of-type img {
+  height: 70px;
+  margin-top: 20px;
 }
