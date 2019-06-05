@@ -3,6 +3,7 @@
 
     #7a3a95
 
+    #555
     #f4f4f4
 */
 
@@ -81,6 +82,19 @@ h2:after {
 h3 {
   font-size: 110%;
   margin-bottom: 15px;
+}
+
+/* ------ Links ------ */
+a:link, a:visited {
+  color: #8e44ad;
+  text-decoration: none;
+  border-bottom: 2px solid #8e44ad;
+
+  transition: border 0.2s;
+}
+a:hover, a:active {
+  color: #555;
+  border-bottom: 2px solid transparent;
 }
 
 /* ------- BUTTONS ------ */
@@ -303,6 +317,7 @@ header {
 }
 
 /* ------ How It Works Section ------ */
+
 .section-how {
   background-color: #f4f4f4;
 }
@@ -323,8 +338,6 @@ header {
 .step {
   margin-bottom: 50px;
 }
-
-
 
 .step p {
   padding-top: 0;
@@ -349,17 +362,67 @@ header {
   margin-right: 25px
 }
 
-.appIconGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .app-icon img{
   height: 50px;
   width: auto;
+  float: left;
 }
 
 .app-icon:last-of-type img {
   height: 70px;
   margin-top: 20px;
 }
+
+/* ------ Conventions Section ------ */
+
+.cityGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.city {
+  text-align: center;
+  margin-right: 5%;
+  text-align: left;
+}
+
+.city img {
+  height: auto;
+  width: 100%;
+  object-fit: scale-down;
+  margin-bottom: 5%;
+}
+
+.city h3 {
+  text-align: left;
+}
+
+.city div {
+  margin-bottom: 5%;
+}
+
+.city div:last-of-type {
+  color: #8e44ad;
+}
+
+.city i {
+  margin-right: 5%;
+  color: #8e44ad;
+}
+
+
+/* Resizing first image */
+.city:first-of-type img {
+  -webkit-transform: scale(1.11);
+  -ms-transform: scale(1.11);
+  transform: scale(1, 1.11);
+  margin-top: 3.2%;
+  margin-bottom: 9%;
+}
+
+
+
+
+
+
+
