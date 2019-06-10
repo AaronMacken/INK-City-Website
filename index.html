@@ -9,7 +9,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     />
-    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400&display=swap"
+      rel="stylesheet"
+    />
     <script src="https://kit.fontawesome.com/57fbcb0790.js"></script>
 
     <title>INK City</title>
@@ -125,7 +128,6 @@
 
       <!-- GRID -->
       <div class="row howGrid">
-
         <!-- LEFT SIDE GRID -->
         <div class="howGridLeft">
           <img src="img/logoPurp.png" />
@@ -133,7 +135,6 @@
 
         <!-- RIGHT SIDE GRID -->
         <div class="howGridRight">
-
           <!-- GRID ITEM 1 -->
           <div class="step clearfix">
             <div>1</div>
@@ -177,7 +178,6 @@
       <!-- CITY GRID -->
       <div class="row">
         <div class="cityGrid">
-
           <!-- GRID ITEM 1 -->
           <div class="city">
             <img src="img/losAngeles.jpeg" alt="" />
@@ -289,7 +289,6 @@
 
       <!-- SIGN UP GRID -->
       <div class="row signUpGrid">
-
         <!-- GRID ITEM 1 -->
         <div class="signItem">
           <div class="plan-box">
@@ -300,9 +299,11 @@
 
           <div class="details-box">
             <ul>
-                <li><i class="fas fa-check"></i> Discounted flight itenerary</li>
-                <li><i class="fas fa-check"></i> Discounted hotel booking</li>
-                <li><i class="fas fa-check"></i> Discounted convention tickets</li>
+              <li><i class="fas fa-check"></i> Discounted flight itenerary</li>
+              <li><i class="fas fa-check"></i> Discounted hotel booking</li>
+              <li>
+                <i class="fas fa-check"></i> Discounted convention tickets
+              </li>
             </ul>
           </div>
 
@@ -321,9 +322,13 @@
 
           <div class="details-box">
             <ul>
-                <li><i class="fas fa-times">&nbsp;</i> Discounted flight itenerary</li>
-                <li><i class="fas fa-check"></i> Discounted hotel booking</li>
-                <li><i class="fas fa-check"></i> Discounted convention tickets</li>
+              <li>
+                <i class="fas fa-times">&nbsp;</i> Discounted flight itenerary
+              </li>
+              <li><i class="fas fa-check"></i> Discounted hotel booking</li>
+              <li>
+                <i class="fas fa-check"></i> Discounted convention tickets
+              </li>
             </ul>
           </div>
 
@@ -342,9 +347,15 @@
 
           <div class="details-box">
             <ul>
-              <li><i class="fas fa-times">&nbsp;</i> Discounted flight itenerary</li>
-              <li><i class="fas fa-times">&nbsp;</i> Discounted hotel booking</li>
-              <li><i class="fas fa-check"></i> Discounted convention tickets</li>
+              <li>
+                <i class="fas fa-times">&nbsp;</i> Discounted flight itenerary
+              </li>
+              <li>
+                <i class="fas fa-times">&nbsp;</i> Discounted hotel booking
+              </li>
+              <li>
+                <i class="fas fa-check"></i> Discounted convention tickets
+              </li>
             </ul>
           </div>
 
@@ -355,8 +366,50 @@
       </div>
     </section>
 
-    <section></section>
-    <section></section>
+    <section class="sectionForm">
+      <div class="row">
+        <h2>Provide us some feedback!</h2>
+      </div>
+
+      <div class="row">
+        <!-- label for attr links up with input's id, click the label and be redirected to the correct input -->
+        <form action="" method="POST">
+          <div class="formGrid">
+      
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name" 
+              placeholder="Enter your name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" 
+            placeholder="Enter your email" required>
+
+            <label for="find-us">How did you find us?</label>
+            <select name="find-us" id="find-us">
+              <option value="friends">Friends</option>
+              <option value="search">Search Engine</option>
+              <option value="ad">Advertisement</option>
+              <option value="other">Other</option>
+            </select>
+
+            <label for="news-letter">Click to recieve emails.</label>
+            <div>
+              <input type="checkbox" name="news" id="news-letter" checked> Yes, please!
+            </div>
+
+            <label for="comment">Let us know how we're doing!</label>
+            <textarea name="comment" id="comment" placeholder="Your comments here"></textarea>
+
+            <div>&nbsp;</div>
+            <input type="submit" value="Send!" id="submitButton">
+            
+          </div>
+        </form>
+        
+
+
+      </div>
+    </section>
     <section></section>
   </body>
 </html>

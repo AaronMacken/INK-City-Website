@@ -15,6 +15,8 @@
   box-sizing: border-box;
 }
 
+*:focus {outline: none;}
+
 html,
 body {
   background-color: #fff;
@@ -102,7 +104,8 @@ a:active {
 /* ------- BUTTONS ------ */
 
 .btn:link,
-.btn:visited {
+.btn:visited,
+input[type=submit] {
   display: inline-block;
   padding: 10px 30px;
   text-decoration: none;
@@ -113,7 +116,8 @@ a:active {
 }
 
 .btn-full:link,
-.btn-full:visited {
+.btn-full:visited,
+input[type=submit] {
   background-color: #8e44ad;
   border: 1px solid #8e44ad;
   color: #fff;
@@ -127,7 +131,9 @@ a:active {
 }
 
 .btn:hover,
-.btn:active {
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active {
   background-color: #7a3a95;
 }
 
@@ -541,3 +547,31 @@ cite img {
   border-bottom: none;
 }
 
+/* ------ Feedback Section ------ */
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 10%;
+
+  margin: 0 auto;
+  width: 60%;
+  text-align: left;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea {
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+textarea {
+  height: 100px;
+}
+
+#submitButton {
+  display: inline-block;
+  justify-self: center;
+}
