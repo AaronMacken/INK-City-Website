@@ -22,8 +22,8 @@
       <!-- NAV -->
       <nav>
         <div class="row">
-          <img src="img/logo.png" alt="INK City logo" class="logo" />
-          <ul class="main-nav">
+          <img src="img/logo.png" alt="INK City logo" class="logo clearfix" />
+          <ul class="main-nav clearfix">
             <li><a href="#">Expand Your Horizons</a></li>
             <li><a href="#">How it works</a></li>
             <li><a href="#">Conventions</a></li>
@@ -375,14 +375,23 @@
         <!-- label for attr links up with input's id, click the label and be redirected to the correct input -->
         <form action="" method="POST">
           <div class="formGrid">
-      
             <label for="name">Name</label>
-            <input type="text" name="name" id="name" 
-              placeholder="Enter your name" required>
-            
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Enter your name"
+              required
+            />
+
             <label for="email">Email</label>
-            <input type="email" name="email" id="email" 
-            placeholder="Enter your email" required>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email"
+              required
+            />
 
             <label for="find-us">How did you find us?</label>
             <select name="find-us" id="find-us">
@@ -394,22 +403,49 @@
 
             <label for="news-letter">Click to recieve emails.</label>
             <div>
-              <input type="checkbox" name="news" id="news-letter" checked> Yes, please!
+              <input type="checkbox" name="news" id="news-letter" checked />
+              Yes, please!
             </div>
 
             <label for="comment">Let us know how we're doing!</label>
-            <textarea name="comment" id="comment" placeholder="Your comments here"></textarea>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder="Your comments here"
+            ></textarea>
 
             <div>&nbsp;</div>
-            <input type="submit" value="Send!" id="submitButton">
-            
+            <input type="submit" value="Send!" id="submitButton" />
           </div>
         </form>
-        
-
-
       </div>
     </section>
-    <section></section>
+
+
+
+    <!-- Footer section -->
+    <footer>
+      
+      <div class="row">
+        <div class="footerGrid">
+          <ul class="footer-nav clearfix">
+            <li><a href="#">About us</a></li>
+            <li><a href="#">iOS App</a></li>
+            <li><a href="#">Android App</a></li>
+          </ul>
+
+          <ul class="social-links clearfix">
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="row">
+        <p>This webpage is a practice project for a fictional company made with HTML5 and CSS3.</p>
+      </div>
+    </footer>
+
   </body>
 </html>

@@ -43,7 +43,7 @@ body {
   margin: 0 auto;
 }
 
-section {
+section{
   padding: 80px 0;
 }
 
@@ -549,6 +549,10 @@ cite img {
 
 /* ------ Feedback Section ------ */
 
+.sectionForm {
+  padding-bottom: 160px;
+}
+
 .formGrid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -574,4 +578,80 @@ textarea {
 #submitButton {
   display: inline-block;
   justify-self: center;
+}
+
+/* ------ Footer Section ------ */
+
+footer {
+  background-color: rgb(63, 63, 63);
+  padding: 40px;
+  font-size: 80%;
+}
+
+.footerGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.footer-nav {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.social-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-links li a:link,
+.social-links li a:visited {
+  font-size: 140%;
+}
+
+.fa-facebook-f,
+.fa-instagram,
+.fa-twitter {
+  transition: color 0.2s;
+}
+
+.fa-facebook-f:hover {
+  color: #3b5998;
+}
+
+.fa-instagram:hover {
+  color: #517fa4;
+}
+
+.fa-twitter:hover {
+  color: #00aced;
+}
+
+.footer-nav li,
+.social-links li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited {
+  text-decoration: none;
+  border: 0;
+  color: rgb(150, 150, 150);
+  transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active {
+  color: #ddd;
+}
+
+footer p {
+  color: #888;
+  text-align: center;
+  font-size: 90%;
+  margin-top: 25px;
 }
