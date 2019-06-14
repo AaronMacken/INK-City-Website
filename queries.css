@@ -8,12 +8,21 @@
     padding: 0 2%;
     width: 100%;
   }
+  
+  h2 {
+    font-size: 130%;
+  }
+
+  .features-description {
+    font-size: 90%;
+    margin-top: 10vh;
+  }
 
   .featuresGrid {
     font-size: 90%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-column-gap: 8.3%;
-    width: 90%;
+    grid-template-columns: 1fr;
+    grid-gap: 8.3%;
+    width: 70%;
   }
 }
 
@@ -29,6 +38,7 @@
   section {
     padding: 60px 0;
   }
+
   .features-description {
     width: 80%;
     margin-left: 10%;

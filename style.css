@@ -222,14 +222,18 @@ header {
 }
 
 .featuresGrid {
-  height: 25vh;
+  /* Using min height instead of height prevents sections from overlapping */
+  min-height: 25vh;
   width: 75vw;
-  margin-top: 30px;
+  margin-top: 8vh;
   display: grid;
-  grid-template-columns: 33% 33% 33%;
-  grid-column-gap: 5%;
-  align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 7%;
   justify-items: center;
+}
+
+.featuresGrid h3 {
+  align-items: baseline;
 }
 
 .featuresGrid div {
@@ -258,6 +262,7 @@ header {
 }
 
 /* ------ Image Grid ------ */
+
 
 .imageGrid {
   display: grid;
@@ -329,7 +334,7 @@ header {
   height: 30vh;
   width: 30vw;
   object-fit: scale-down;
-  margin-top: 30px;
+  
 }
 
 .howGrid {
@@ -337,11 +342,19 @@ header {
   grid-template-columns: 1fr 1fr;
   margin-top: 50px;
   align-items: center;
-   justify-items: center;
+  justify-items: center;
+  
+}
+
+.howGridRight { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
 }
 
 .step {
-  margin-bottom: 50px;
+  vertical-align: middle;
+  margin: 5% 0;
 }
 
 .step p {
