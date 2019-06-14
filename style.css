@@ -15,7 +15,9 @@
   box-sizing: border-box;
 }
 
-*:focus {outline: none;}
+*:focus {
+  outline: none;
+}
 
 html,
 body {
@@ -35,7 +37,6 @@ body {
   height: 0;
   visibility: hidden;
 }
-
 /* ------ REUSABLE COMPONENTS ------ */
 
 .row {
@@ -43,7 +44,7 @@ body {
   margin: 0 auto;
 }
 
-section{
+section {
   padding: 80px 0;
 }
 
@@ -105,7 +106,7 @@ a:active {
 
 .btn:link,
 .btn:visited,
-input[type=submit] {
+input[type="submit"] {
   display: inline-block;
   padding: 10px 30px;
   text-decoration: none;
@@ -117,7 +118,7 @@ input[type=submit] {
 
 .btn-full:link,
 .btn-full:visited,
-input[type=submit] {
+input[type="submit"] {
   background-color: #8e44ad;
   border: 1px solid #8e44ad;
   color: #fff;
@@ -132,8 +133,8 @@ input[type=submit] {
 
 .btn:hover,
 .btn:active,
-input[type=submit]:hover,
-input[type=submit]:active {
+input[type="submit"]:hover,
+input[type="submit"]:active {
   background-color: #7a3a95;
 }
 
@@ -227,6 +228,8 @@ header {
   display: grid;
   grid-template-columns: 33% 33% 33%;
   grid-column-gap: 5%;
+  align-items: center;
+  justify-items: center;
 }
 
 .featuresGrid div {
@@ -237,20 +240,16 @@ header {
   font-size: 300%;
   display: block;
   color: #8e44ad;
+  height: 50px;
 }
 
 .featuresGrid div:last-of-type i {
   display: inline-block;
   font-size: 100%;
-  margin-top: 30px;
 }
 
 .featuresGrid h3 {
   margin-top: 15px;
-}
-
-.featuresGrid div:last-of-type h3 {
-  margin-top: 25px;
 }
 
 .featuresGrid p {
@@ -337,6 +336,8 @@ header {
   display: grid;
   grid-template-columns: 1fr 1fr;
   margin-top: 50px;
+  align-items: center;
+   justify-items: center;
 }
 
 .step {
@@ -517,7 +518,6 @@ cite img {
   border-bottom: 1px solid rgba(0, 0, 0, 0.205);
 }
 
-
 .plan-price {
   font-size: 300%;
   font-weight: 200;
@@ -563,8 +563,8 @@ cite img {
   text-align: left;
 }
 
-input[type=text],
-input[type=email],
+input[type="text"],
+input[type="email"],
 select,
 textarea {
   border-radius: 3px;

@@ -1,0 +1,58 @@
+/* Big tablet to 1200px (widths smaller than the 1140 px row */
+@media only screen and (max-width: 1200px) {
+  .intro-text-box {
+    width: 100%;
+    padding: 0 2%;
+  }
+  .row {
+    padding: 0 2%;
+    width: 100%;
+  }
+
+  .featuresGrid {
+    font-size: 90%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 8.3%;
+    width: 90%;
+  }
+}
+
+/* Small phones to big tablet: from 790px to 1023px */
+@media only screen and (max-width: 1023px) {
+  /* Since we set all of our font sizes with percentages
+    used a base size for the body, resizing the base will
+    change the size of all the web pages fonts */
+  body {
+    font-size: 18px;
+  }
+  /* originally 80px top / bot padding */
+  section {
+    padding: 60px 0;
+  }
+  .features-description {
+    width: 80%;
+    margin-left: 10%;
+  }
+  .step {
+    margin-bottom: 40px;
+  }
+}
+
+/* small phones to small tablets: from 481px to 767px */
+@media only screen and (max-width: 789px) {
+  nav {
+    display: none;
+  }
+}
+
+/* Small phones: from 0 to 480px */
+@media only screen and (max-width: 480px) {
+}
+
+/* for each break point, change body font size and section padding
+he used overflow hidden for something?
+make things fit by giving it padding percentage for the left and right
+for phone size do nav display none because we will make a hamburger menu
+he set column width to 100% to make columns stack but I dont think that will work with css grid
+
+*/
