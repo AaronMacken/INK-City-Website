@@ -4,6 +4,7 @@
     width: 100%;
     padding: 0 2%;
   }
+  
   .row {
     padding: 0 2%;
     width: 100%;
@@ -32,7 +33,7 @@
     used a base size for the body, resizing the base will
     change the size of all the web pages fonts */
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
   /* originally 80px top / bot padding */
   section {
@@ -44,15 +45,32 @@
     margin-left: 10%;
   }
   .step {
-    margin-bottom: 40px;
+    margin-bottom: 1%;
+  }
+  .stepText {
+    padding-top: 3%;
+  }
+  
+  .step:first-of-type p {
+    padding-top: 5%;
+  }
+
+  .cityGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .city {
+    align-items: center;
+    text-align: center;
   }
 }
 
-/* small phones to small tablets: from 481px to 767px */
+/* small phones to small tablets: from 481px to 789px */
 @media only screen and (max-width: 789px) {
   nav {
     display: none;
   }
+
 }
 
 /* Small phones: from 0 to 480px */

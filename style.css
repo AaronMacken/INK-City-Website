@@ -25,6 +25,8 @@ body {
   color: #555;
   font-family: "Raleway", sans-serif;
   font-size: 20px;
+  /* prevent divs with white space extendeing from showing */
+  overflow-x: hidden;
 }
 
 .clearfix {
@@ -169,10 +171,9 @@ header {
 
 .intro-text-box {
   position: absolute;
-  width: 30vw;
-  top: 30%;
+  min-width: 30vw;
+  top: 40%;
   left: 30%;
-  transform: translate(-30%, -30%);
 }
 
 .logo {
@@ -353,19 +354,11 @@ header {
 }
 
 .step {
-  vertical-align: middle;
   margin: 5% 0;
 }
 
-.step p {
-  padding-top: 0;
-}
 
-.step:first-of-type p {
-  padding-top: 13px;
-}
-
-.step div {
+.step-border {
   color: #8e44ad;
   font-size: 150%;
   height: 60px;
@@ -377,6 +370,14 @@ header {
   padding: 7px;
   display: inline-block;
   margin-right: 25px;
+}
+
+.stepText {
+  padding-top: 1%;
+}
+
+.step:first-of-type p {
+  padding-top: 3%;
 }
 
 .app-icon img {
