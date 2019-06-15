@@ -65,18 +65,75 @@
   }
 }
 
-/* small phones to small tablets: from 481px to 789px */
+/* small phones to small tablets: from 0px to 789px */
 @media only screen and (max-width: 789px) {
   nav {
     display: none;
   }
 
-}
+  .intro-text-box {
+    position: absolute;
+    min-width: 30vw;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50% -5%);
+  }
 
-/* Small phones: from 0 to 480px */
-@media only screen and (max-width: 480px) {
-}
+  .imageGrid {
+    grid-template-columns: 1fr;
+    padding-bottom: 0;
+  }
 
+  .gridItem1, .gridItem2, .gridItem3 {
+    display: none;
+  }
+
+  .howGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .cityGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .city {
+    margin: 0 auto;
+  }
+
+  .testimonialGrid {
+    
+    grid-template-columns: 1fr;
+    grid-column-gap: 5%;
+    background-position: top;
+  }
+
+  .signUpGrid {
+    grid-template-columns: 1fr;
+    width: 70%;
+    grid-gap: 2%;
+    text-align: center;
+  }
+
+  .signItem {
+    margin: 0 auto;
+  }
+
+  .formGrid {
+    grid-template-columns: 1fr;
+    width: 75%;
+    grid-gap: 20px;
+  }
+
+  #formPlaceHolder {
+    display: none;
+  }
+
+  section.sectionForm {
+    padding-bottom: 2%;
+  }
+
+}
 /* for each break point, change body font size and section padding
 he used overflow hidden for something?
 make things fit by giving it padding percentage for the left and right
