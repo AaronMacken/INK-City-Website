@@ -67,6 +67,8 @@
 
 /* small phones to small tablets: from 0px to 789px */
 @media only screen and (max-width: 789px) {
+
+
   nav {
     display: none;
   }
