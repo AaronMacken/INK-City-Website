@@ -1,0 +1,35 @@
+html, body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1482375702222-03a768d5ea3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
+    background-position: center;
+    background-size: cover;
+}
+
+.registerGrid {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 60%;
+    height: 100%;
+    margin: 10% auto;
+    grid-gap: 10%;
+    justify-items: center;
+
+}
+
+.registerGrid h2 {
+    color: #fff;
+}
+
+input {
+    border: 1px solid black;
+    border-radius: 5px;
+    height: 5vh;
+    width: 50%;
+    padding-left: 2%;
+}
+
+
+#registerBtn {
+    display: inline-block;
+    justify-self: center;
+    margin-right: 0;
+}
