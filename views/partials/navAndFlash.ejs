@@ -1,3 +1,4 @@
+<!-- Nav bar -->
 <nav class="clearfix">
   <div class="row clearfix">
     <a href="/"><img src="img/logo.png" alt="INK City logo" class="logo"/></a>
@@ -9,3 +10,15 @@
     </ul>
   </div>
 </nav>
+
+<!-- Flash messages -->
+
+<% if(success && success.length > 0) { %>
+  <div class="row alert alert-success" role="alert">
+    <%= success %>
+  </div>
+  <% } if(error && error.length > 0) { %>
+  <div class="row alert alert-danger" role="alert">
+    <%= error %>
+  </div>
+<% } %>

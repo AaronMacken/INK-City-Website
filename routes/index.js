@@ -63,6 +63,7 @@ passport.authenticate("local", {
     successRedirect: "/browse",
     failureRedirect: "/login",
     // Flash message for login errors.
+    successFlash: "Welcome!",
     failureFlash: "Username or password incorrect."
 }), (req, res) => {});
 
