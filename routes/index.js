@@ -33,13 +33,12 @@ router.post("/register", (req, res) => {
         email: req.body.email
     });
 
-    console.log(newUser);
     // use passport register method to register new user
     User.register(newUser, req.body.password, (err, user) => {
         if(err) {
             // Use connect-flash var defined in app.JS - res.locals code to display
             // a flash message if an error occurs in the registration process.
-            req.flash("error", "Something went wrong during the registration process.");
+            req.flash("error", "Username or e-mail may already be in use.");
             // Redirect user back to the register form
             return res.redirect("/register");
         }
@@ -48,5 +47,24 @@ router.post("/register", (req, res) => {
         res.redirect("/login");
     });
 });
+
+
+// ------------ Login Routes ------------ //
+
+// Show login form
+router.get("/login", (req, res) => {
+    res.render("authViews/login");
+});
+
+// Login POST route
+router.post("/login", 
+// Use passport local strategy to authenticate user
+passport.authenticate("local", {
+    successRedirect: "/browse",
+    failureRedirect: "/login",
+    // Flash message for login errors.
+    failureFlash: "Username or password incorrect."
+}), (req, res) => {});
+
 
 module.exports = router;
