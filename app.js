@@ -48,6 +48,8 @@ passport.deserializeUser(User.deserializeUser());
 
 // Variables available to all templates // 
 app.use((req, res, next) => {
+    // if logged out, req.user will be undefined
+    // if logged in, passport will create req.user and fill it with username and id
     res.locals.currentUser = req.user;
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");

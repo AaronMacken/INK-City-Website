@@ -3,10 +3,18 @@
   <div class="row clearfix">
     <a href="/"><img src="img/logo.png" alt="INK City logo" class="logo"/></a>
     <ul class="main-nav">
-      <li><a href="#">About</a></li>
+      <li><a href="/">About</a></li>
       <li><a href="/browse">Browse</a></li>
-      <li><a href="/login">Login</a></li>
-      <li><a href="/register">Register</a></li>
+
+      <!-- currentUser comes from app JS where we make currentUser available through
+      req.user - provided by passport when a user is logged in -->
+      <% if(!currentUser) { %>
+        <li><a href="/login">Login</a></li>
+        <li><a href="/register">Register</a></li>
+      <% } else { %>
+        <li><a href="/logout">Logout</a></li>
+      <% } %>
+      
     </ul>
   </div>
 </nav>

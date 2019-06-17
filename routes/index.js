@@ -67,5 +67,14 @@ passport.authenticate("local", {
     failureFlash: "Username or password incorrect."
 }), (req, res) => {});
 
+// Logout route
+router.get("/logout", (req, res) => {
+    // Flash message upon logout. 
+    req.flash("success", "See you next time " + req.user.username + ".");
+    // use passport's logout function.
+    req.logout();
+    res.redirect("/browse");
+});
+
 
 module.exports = router;
