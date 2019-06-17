@@ -2,29 +2,40 @@ html, body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("https://images.unsplash.com/photo-1482375702222-03a768d5ea3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80");
     background-position: center;
     background-size: cover;
-}
-
-.registerGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 60%;
-    height: 100%;
-    margin: 10% auto;
-    grid-gap: 10%;
-    justify-items: center;
 
 }
 
-.registerGrid h2 {
+.formWrapper {
+    display: block;
+    text-align: center;
+}
+
+form {
+    display: inline-block;
+    text-align: center;
+    height: 50vh;
+    margin: 5vh auto 10vh auto;
+}
+
+form h2 {
     color: #fff;
+    -webkit-text-shadow: 0 0 10px #000000;
+    text-shadow: 0 0 50px #000000;
 }
 
 input {
-    border: 1px solid black;
+    border: 2px solid #8e44ad;
     border-radius: 5px;
     height: 5vh;
     width: 50%;
     padding-left: 2%;
+    -webkit-box-shadow: 0 0 10px #000000;
+    box-shadow: 0 0 50px #000000;
+}
+
+.formWrapper input {
+    margin-bottom: 25px;
+    height: 50px;
 }
 
 
@@ -32,4 +43,5 @@ input {
     display: inline-block;
     justify-self: center;
     margin-right: 0;
+    padding: 0;
 }
