@@ -27,8 +27,12 @@ header {
   left: 30%;
 }
 
+#landingGhost {
+  color: #fff;
+}
 
 /* ------ Features Section ------ */
+
 
 .features-description {
   line-height: 145%;

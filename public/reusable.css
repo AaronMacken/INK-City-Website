@@ -43,7 +43,7 @@
     visibility: hidden;
   }
 
-  
+
   .row {
     width: 1140px;
     margin: 0 auto;
@@ -52,10 +52,11 @@
   section {
     padding: 80px 0;
   }
-
-  section:first-of-type {
+  
+  #navPaddingSection {
     padding: 0 0 70px 0;
   }
+  
 
   /* ------ Alert Messages ------ */
   .alert {
