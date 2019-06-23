@@ -49,7 +49,7 @@ router.post("/register", (req, res) => {
 });
 
 
-// ------------ Login Routes ------------ //
+// ------------ User Routes ------------ //
 
 // Show login form
 router.get("/login", (req, res) => {
@@ -76,5 +76,10 @@ router.get("/logout", (req, res) => {
     res.redirect("/browse");
 });
 
+// User profile route
+// temporarily loading a static profile page, this will be changed later.
+router.get("/profile", (req, res) => {
+    res.render("authViews/profile");
+});
 
 module.exports = router;

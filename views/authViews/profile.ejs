@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="reusable.css" />
+    <link rel="stylesheet" href="profile.css" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400&display=swap" rel="stylesheet"/>
+    <title>Profile Page</title>
+</head>
+<body>
+    <!-- Nav Var -->
+    <% include ../partials/navAndFlash %>
+    <section id="profileSection">
+        <div class="page-layout-grid">
+            <!-- Card -->
+            <div class="card">
+              <img src="img/aaron.jpeg" class="card-img-top" id="aaron" />
+              <div class="card-body">
+                <h5 class="card-title">Aaron Macken</h5>
+                <div class="card-content">
+                  <p class="card-about">About</p>
+                  <p class="card-user-description">
+                    My name is Aaron and I am a web developer! I currently create my
+                    sites using mongo, express, node and NPM.
+                  </p>
+                  <div class="card-follow-grid">
+                    <p class="followText">Following</p>
+                    <p>0</p>
+                    <p class="followText">Friends</p>
+                    <p>0</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Content Col -->
+            <div class="content-column">
+              <!-- Tab Instructions -->
+              <!--    Create buttons to open specific tab content.
+                All <div> elements with class="tabcontent" are hidden by default (with CSS & JS).
+                When the user clicks on a button - it will open the tab content that "matches" this button. -->
+    
+              <!-- Tab Links -->
+              <div class="tab">
+                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Following')">
+                  Following
+                </button>
+                <button class="tablinks" id="btnRight" onclick="openTab(event, 'Friends')">
+                  Friends
+                </button>
+              </div>
+    
+              <!-- Tab content -->
+              <div id="Following" class="tabcontent">
+                <ul class="list">
+                  <li>Nothing here yet</li>
+                </ul>
+              </div>
+    
+              <div id="Friends" class="tabcontent">
+                <ul class="list">
+                  <li>Nothing here yet</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+    </section>
+    
+
+    <script src="tab.js"></script>
+
+
+
+
+    <% include ../partials/footer %>
+
