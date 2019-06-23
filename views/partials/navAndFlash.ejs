@@ -1,32 +1,39 @@
-<!-- Nav bar -->
-<nav class="clearfix">
-  <div class="row clearfix">
-    <a href="/"><img src="img/logo.png" alt="INK City logo" class="logo"/></a>
-    <ul class="main-nav">
-      <li><a href="/">About</a></li>
-      <li><a href="/browse">Browse</a></li>
+<div class="wrapper">
+  <nav>
+    <div class="menu-icon">
+      <i class="fas fa-bars"></i>
+    </div>
 
-      <!-- currentUser comes from app JS where we make currentUser available through
-      req.user - provided by passport when a user is logged in -->
-      <% if(!currentUser) { %>
+    <a href="/"><img src="img/logo.png" alt="INK City logo" class="logo"/></a>
+
+    <div class="menu">  
+      <ul>
+        <li><a href="/">About</a></li>
+        <li><a href="/browse">Browse</a></li>
+
+        <!-- currentUser comes from app JS where we make currentUser available through
+          req.user - provided by passport when a user is logged in -->
+        <% if(!currentUser) { %>
         <li><a href="/login">Login</a></li>
         <li><a href="/register">Register</a></li>
-      <% } else { %>
+        <% } else { %>
         <li><a href="/logout">Logout</a></li>
-      <% } %>
-      
-    </ul>
-  </div>
-</nav>
+        <% } %>
+      </ul>
+    </div>
+  </nav>
+</div>
+
+<section></section>
 
 <!-- Flash messages -->
 
 <% if(success && success.length > 0) { %>
-  <div class="row alert alert-success" role="alert">
-    <%= success %>
-  </div>
-  <% } if(error && error.length > 0) { %>
-  <div class="row alert alert-danger" role="alert">
-    <%= error %>
-  </div>
+<div class="row alert alert-success" role="alert">
+  <%= success %>
+</div>
+<% } if(error && error.length > 0) { %>
+<div class="row alert alert-danger" role="alert">
+  <%= error %>
+</div>
 <% } %>
