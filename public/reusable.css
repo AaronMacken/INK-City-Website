@@ -130,6 +130,12 @@
   
     transition: border 0.2s;
   }
+
+  .j-overlay a:link,
+  .jay-overlay a:visited {
+    border-bottom: none;
+  }
+
   a:hover,
   a:active {
     color: #555;
