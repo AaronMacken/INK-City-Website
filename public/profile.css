@@ -10,7 +10,8 @@ body {
 
 nav {
   background-color: black;
-  box-shadow: 0 2px 5px;
+  -webkit-box-shadow: 0 2px 5px;
+          box-shadow: 0 2px 5px;
 }
 
 /* ------ Outer Grid ------ */
@@ -24,16 +25,20 @@ nav {
 .card {
   position: relative;
   display: -ms-flexbox;
+  display: -webkit-box;
   display: flex;
   -ms-flex-direction: column;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
   word-wrap: break-word;
   background-color: #fff;
   min-height: 565px;
   background-clip: border-box;
   border-radius: 0.25rem;
   width: 20vw;
-  box-shadow: 0 18px 40px -12px #888888b6;
+  -webkit-box-shadow: 0 18px 40px -12px #888888b6;
+          box-shadow: 0 18px 40px -12px #888888b6;
 }
 
 img {
@@ -44,7 +49,8 @@ img {
 .card-img-top {
   min-height: 35vh;
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-left-radius: 0.25rem;
   border-top-right-radius: 0.25rem;
 }
@@ -96,7 +102,9 @@ img {
 .card-follow-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
@@ -110,7 +118,8 @@ img {
 
 .content-column {
   background-color: #fff;
-  box-shadow: 0 18px 40px -12px #888888b6;
+  -webkit-box-shadow: 0 18px 40px -12px #888888b6;
+          box-shadow: 0 18px 40px -12px #888888b6;
   border-radius: 3px;
   width: 75vw;
   min-height: 565px;
@@ -137,6 +146,7 @@ img {
   padding: 14px 16px;
   border-bottom: none;
   font-size: 110%;
+  -webkit-transition: .3s;
   transition: .3s
 }
 
