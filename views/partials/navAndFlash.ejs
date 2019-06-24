@@ -4,7 +4,7 @@
       <i class="fas fa-bars"></i>
     </div>
 
-    <a href="/"><img src="img/logo.png" alt="INK City logo" class="logo"/></a>
+    <a href="/"><img src="/img/logo.png" alt="INK City logo" class="logo"/></a>
 
     <div class="menu">  
       <ul>
@@ -15,9 +15,9 @@
           req.user - provided by passport when a user is logged in -->
         <% if(!currentUser) { %>
         <li><a href="/login">Login</a></li>
-        <li><a href="/register">Register</a></li>
+        <li><a href="/users/new">Register</a></li>
         <% } else { %>
-          <li><a href="/profile">Profile</a></li>  
+          <li><a href="/users/<%= currentUser._id %>">Profile</a></li>  
         <li><a href="/logout">Logout</a></li>
         <% } %>
       </ul>

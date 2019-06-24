@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="reusable.css" />
-    <link rel="stylesheet" href="register.css" />
+    <link rel="stylesheet" href="/reusable.css" />
+    <link rel="stylesheet" href="/register.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400&display=swap" rel="stylesheet"/>
     <% include ../partials/favicon %>
@@ -16,10 +16,9 @@
     <% include ../partials/navAndFlash %>
 
     <div class="formWrapper">
-        <form action="/register" method="POST">
+        <form action="/users" method="POST">
             <h2>Sign up for free!</h2>
             <input type="text" name="username" placeholder="Enter your username" required>
-            <input type="email" name="email" placeholder="Enter your email" required>
             <input type="password" name="password" placeholder="Enter your password" required>
             <input type="submit" value="Send!" id="registerBtn"/>
         </form>

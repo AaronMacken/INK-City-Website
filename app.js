@@ -11,7 +11,8 @@ const express = require("express"),
 
 
 // Require Routes //
-const indexRoutes = require("./routes/index");
+const indexRoutes = require("./routes/index"),
+    usersRoutes = require("./routes/users");
 
 
 // Connect MongoDB //
@@ -59,6 +60,7 @@ app.use((req, res, next) => {
 
 // Use Routes
 app.use(indexRoutes);
+app.use("/users", usersRoutes);
 
 
 app.listen(process.env.PORT || 3000, () => console.log("Server is listening"));

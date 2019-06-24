@@ -5,8 +5,16 @@ const mongoose = require("mongoose"),
 // Mongoose User Schema
 const userSchema = new mongoose.Schema({
     username: String,
-    email: String,
-    password: String
+    password: String, 
+    profilePicture: String,
+    about: String,
+    following: [],
+    friends: [
+        {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "User"
+        }
+      ]
 });
 
 // Include passport-local-mongoose package functionality into the User Schema
