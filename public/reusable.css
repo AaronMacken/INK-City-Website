@@ -277,7 +277,8 @@
     }
 
     nav ul {
-      height: 0px;
+      min-height: 0px;
+      max-height: 0px;
       background: #000;
       margin-right: 0;
     }
@@ -288,7 +289,8 @@
     }
 
     .showing {
-      height: 20em;
+      min-height: 100vh;
+      max-height: 100vh;
     }
 
     nav ul li {
