@@ -23,7 +23,12 @@
               <div class="card-body">
                 <h5 class="card-title">Aaron Macken</h5>
                 <div class="card-content">
-                  <p class="card-about">About</p>
+                  <div class="card-about">
+                    <p>About</p>
+                    <!-- Open modal through Icon -->
+                    <i id="myBtn" class="fas fa-user-edit"></i>
+                  </div>
+                  
                   <p class="card-user-description">
                     My name is Aaron and I am a web developer! I currently create my
                     sites using mongo, express, node and NPM.
@@ -37,6 +42,7 @@
                 </div>
               </div>
             </div>
+
             <!-- Content Col -->
             <div class="content-column">
               <!-- Tab Instructions -->
@@ -63,13 +69,21 @@
     
               <div id="Friends" class="tabcontent">
                 <ul class="list">
-                  <li>Nothing here yet</li> <i class="fas fa-times"></i>
+                  <li>Nothing here yet</li>  <i class="fas fa-times"></i>
                 </ul>
               </div>
             </div>
           </div>
     </section>
     
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form action="POST"></form>
+      </div>
+  </div>
 
     <script src="/tab.js"></script>
 
