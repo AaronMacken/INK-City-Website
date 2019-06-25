@@ -6,14 +6,19 @@ const express = require("express"),
 
 // ------------ Basic Routes ------------ //
 
-// Landing Route
+// Landing route
 router.get("/", (req, res) => {
     res.render("indexViews/landing");
 });
 
-// Juicer route
+// Browse route
 router.get("/browse", (req, res) => {
     res.render("indexViews/browse");
+});
+
+// Juicer route
+router.get("/indexJuicer", (req, res) => {
+    res.render("indexViews/indexJuicer");
 });
 
 // ------------ Login Logout Routes ------------ //
@@ -27,7 +32,7 @@ router.get("/login", (req, res) => {
 router.post("/login", 
 // Use passport local strategy to authenticate user
 passport.authenticate("local", {
-    successRedirect: "/browse",
+    successRedirect: "/indexJuicer",
     failureRedirect: "/login",
     // Flash message for login errors.
     successFlash: "Welcome!",
@@ -40,7 +45,7 @@ router.get("/logout", (req, res) => {
     req.flash("success", "See you next time " + req.user.username + ".");
     // use passport's logout function.
     req.logout();
-    res.redirect("/browse");
+    res.redirect("/indexJuicer");
 });
 
 module.exports = router;
