@@ -19,9 +19,9 @@
         <div class="page-layout-grid">
             <!-- Card -->
             <div class="card">
-              <img src="/img/aaron.jpeg" class="card-img-top" id="aaron" />
+              <img src="<%= user.profilePictureURL %>" class="card-img-top" id="aaron" />
               <div class="card-body">
-                <h5 class="card-title">Aaron Macken</h5>
+                <h5 class="card-title"><%= user.username %></h5>
                 <div class="card-content">
                   <div class="card-about">
                     <p>About</p>
@@ -30,14 +30,13 @@
                   </div>
                   
                   <p class="card-user-description">
-                    My name is Aaron and I am a web developer! I currently create my
-                    sites using mongo, express, node and NPM.
+                    <%= user.about %>
                   </p>
                   <div class="card-follow-grid">
                     <p class="followText">Following</p>
-                    <p>0</p>
+                    <p><%= user.following.length %></p>
                     <p class="followText">Friends</p>
-                    <p>0</p>
+                    <p><%= user.friends.length %></p>
                   </div>
                 </div>
               </div>
@@ -63,13 +62,23 @@
               <!-- Tab content -->
               <div id="Following" class="tabcontent">
                 <ul class="list">
-                  <li>Nothing here yet</li> <i class="fas fa-times"></i>
+                  <!------------------------------------------ get info from juicer to put data in here ------------------------------------------------>
+                  <% if(user.following.length == 0) { %>
+                    <li>Not following anyone yet!</li> <i class="fas fa-times"></i>
+                  <% } else { %>
+                    <li>Put Juicer Data Here</li> <i class="fas fa-times"></i>
+                  <% } %>
+                  
                 </ul>
               </div>
     
               <div id="Friends" class="tabcontent">
                 <ul class="list">
-                  <li>Nothing here yet</li>  <i class="fas fa-times"></i>
+                    <% if(user.friends.length == 0) { %>
+                      <li>No friends yet ): </li> <i class="fas fa-times"></i>
+                    <% } else { %>
+                      <li>Put Friend Data Here</li> <i class="fas fa-times"></i>
+                    <% } %>
                 </ul>
               </div>
             </div>

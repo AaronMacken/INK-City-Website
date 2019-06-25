@@ -37,12 +37,19 @@ router.post("/", (req, res) => {
 });
 
 // User Show
-
-// User profile route
 // temporarily loading a static profile page, this will be changed later.
 router.get("/:id", (req, res) => {
-  res.render("authViews/profile");
-  // add user find by id
+  // Find user based off of req.params.id that is passed in through the nav profile button
+  // Nav profile button uses currentUser._id which is coming from res.locals statement in app.js
+  User.findById(req.params.id).populate("following").exec((err, foundUser) => {
+    if(err){
+      // ---------------------------------------------------- CREATE A MIDDLEWARE HERE -------------------------------------------------- //
+      console.log(err);
+    } else {
+      console.log(foundUser.following);
+      res.render("authViews/profile", {user:foundUser});
+    }
+  })
 });
 
 module.exports = router;

@@ -6,8 +6,9 @@ const mongoose = require("mongoose"),
 const userSchema = new mongoose.Schema({
     username: String,
     password: String, 
-    profilePictureURL: String,
-    about: String,
+    profilePictureURL: {type: String, default: "https://www.villascitemirabel.com/wp-content/uploads/2016/07/default-profile.png"},
+    // --------------------------------------------------------------- Need to set 150 char limit -------------------------------------------------------------------- // 
+    about: {type: String, default: "Write something about yourself!"},
     following: [],
     friends: [
         {
