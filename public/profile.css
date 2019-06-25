@@ -181,4 +181,17 @@ img {
 
 .list li {
   margin-bottom: 5px;
+  margin-right: 10px;
+  float: left;
+}
+
+.fa-times {
+  margin-top: 3px;
+  color: #c4c3c3;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.fa-times:hover {
+  color: #8e44ad;
 }
