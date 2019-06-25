@@ -6,7 +6,7 @@ const mongoose = require("mongoose"),
 const userSchema = new mongoose.Schema({
     username: String,
     password: String, 
-    profilePicture: String,
+    profilePictureURL: String,
     about: String,
     following: [],
     friends: [

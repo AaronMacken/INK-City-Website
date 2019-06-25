@@ -81,7 +81,28 @@
       <!-- Modal content -->
       <div class="modal-content">
         <span class="close">&times;</span>
-        <form action="POST"></form>
+        <h2 class="modalTitle">Update Profile</h2>
+        
+        <form action="" method="POST"></form>
+          <div class="formWrapper">
+            <div>
+              <label for="profilePictureURL" class="modalLabel">Profile pic img url</label>
+              <input class="modalInput"type="text" name="profilePictureURL" id="profilePictureURL" placeholder="Ex - https://i.imgur.com/VjEkJdI.jpg"/> 
+            </div>
+
+            <div>
+              <label for="about" class="modalLabel">About</label>
+              <textarea name="about" id="about" placeholder="Write something about yourself!"></textarea>
+            </div>
+
+          
+        
+            <input type="submit" class="btn btn-full" id="modalSubmit"></input>
+             
+          </div>
+        </form>  
+        
+
       </div>
   </div>
 

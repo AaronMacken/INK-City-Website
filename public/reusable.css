@@ -224,7 +224,7 @@
   
   .btn:link,
   .btn:visited,
-  input[type="submit"] {
+  input[type="submit"]{
     display: inline-block;
     padding: 10px 30px;
     text-decoration: none;
@@ -236,7 +236,7 @@
   
   .btn-full:link,
   .btn-full:visited,
-  input[type="submit"] {
+  input[type="submit"]{
     background-color: #8e44ad;
     border: 1px solid #8e44ad;
     color: #fff;
