@@ -46,7 +46,7 @@ router.get("/:id", (req, res) => {
       // ---------------------------------------------------- CREATE A MIDDLEWARE HERE -------------------------------------------------- //
       console.log(err);
     } else {
-      console.log(foundUser.following);
+      // console.log(foundUser.following);
       res.render("authViews/profile", {user:foundUser});
     }
   })
