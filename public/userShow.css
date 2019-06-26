@@ -147,13 +147,13 @@ img {
 /* Style the tab */
 .tab {
   overflow: hidden;
-  background: #c4c3c3;
+  background: #eeeeee;
 }
 
 /* Style the buttons that are used to open the tab content */
 .tab button {
-  background-color: #c4c3c3;
-  color: #fff;
+  background-color: #eeeeee;
+  color: rgb(37, 37, 37);
   float: left;
   border: none;
   outline: none;
@@ -172,10 +172,6 @@ img {
   border-top-right-radius: 3px;
 }
 
-/* Change background color of buttons on hover */
-.tab button:hover {
-  color: #484848;
-}
 
 /* Create an active/current tablink class */
 .tab button.active {
