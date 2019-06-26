@@ -3,17 +3,19 @@ const express = require("express"),
   router = express.Router(),
   User = require("../models/user");
 
-// ------------ User Registration Routes ------------ //
+// ------------ Restful Routes - User ------------ //
 
-// User Index
+// ------------ Index - user ------------ //
+router.get("/", (req, res) => {
+  res.render("userViews/userIndex");
+});
 
-
-// User New
+// ------------ New - user ------------ //
 router.get("/new", (req, res) => {
   res.render("authViews/register");
 });
 
-// User Create
+// ------------ Create - user ------------ //
 router.post("/", (req, res) => {
   // New user var w/ username & email contents, obtained from body-parser (req.body)
   var newUser = new User({
@@ -36,8 +38,8 @@ router.post("/", (req, res) => {
   });
 });
 
-// User Show
-// temporarily loading a static profile page, this will be changed later.
+
+// ------------ Show - user ------------ //
 router.get("/:id", (req, res) => {
   // Find user based off of req.params.id that is passed in through the nav profile button
   // Nav profile button uses currentUser._id which is coming from res.locals statement in app.js
@@ -46,10 +48,17 @@ router.get("/:id", (req, res) => {
       // ---------------------------------------------------- CREATE A MIDDLEWARE HERE -------------------------------------------------- //
       console.log(err);
     } else {
-      // console.log(foundUser.following);
-      res.render("authViews/profile", {user:foundUser});
+      // render profile page and pass in dynamically loaded data from returned DB object
+      res.render("userViews/userShow", {user:foundUser});
     }
   })
 });
+
+
+// ------------ Edit - user ------------ //
+
+// ------------ Update - user ------------ //
+
+// ------------ Destroy - user ------------ //
 
 module.exports = router;
