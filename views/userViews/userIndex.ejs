@@ -22,6 +22,27 @@
     <!-- Nav Var -->
     <% include ../partials/navAndFlash %> 
     
+    <section class="userIndexSection">
+      <div class="userIndexWrapper">
+        <% user.forEach((user) => { %>
+          <div class="userDiv">
+            <!-- Image is also an href to the userShow route -->
+            <a href="/users/<%= user._id %>"><img class="clearfix" src="<%= user.profilePictureURL %>" alt="Profile picture"></a>
+            <div class="titleAddGrid">
+              <a href="/users/<%= user._id %>"><p><%= user.username %></p></a> 
+              <!-- The icon is also an href to add the clicked user to the current user friends list -->
+              <i class="fas fa-user-plus"></i>
+            </div>
+            
+            <p class="about"><%= user.about %></p>
+          </div>
+        <% }); %>
+        
+      </div>
+    </section>
+
+
+
     <% include ../partials/footer %>
   </body>
 </html>

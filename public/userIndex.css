@@ -1,3 +1,56 @@
 body, html {
     background-color: black;
 }
+
+.userIndexWrapper {
+    background-color: #1d1d1d;
+    height: 75vh;
+    width: 30vw;
+    margin: 0 auto 0 auto;
+    overflow: auto;
+    border-radius: 3px;
+}
+
+.userDiv {
+    border-bottom: 2px solid #8e44ad;
+    margin: 5%;
+}
+
+.userDiv img {
+    height: 40px;
+    border-radius: 50px;
+    margin-right: 10px;
+    float: left;
+}
+
+.userDiv p {
+    color: #ffffff;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+
+.userDiv a{
+    border-bottom: none;
+}
+
+.about {
+    font-size: 80%;
+}
+
+.titleAddGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.titleAddGrid i {
+    justify-self: end;
+    transition: 0.2s;
+}
+
+.titleAddGrid i:hover {
+    color: #fff;
+}
+
+.titleAddGrid i:active {
+    color: #8e44ad;
+}

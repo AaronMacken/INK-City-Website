@@ -7,7 +7,13 @@ const express = require("express"),
 
 // ------------ Index - user ------------ //
 router.get("/", (req, res) => {
-  res.render("userViews/userIndex");
+  User.find({}, (err, user) => {
+    if(err) {
+      console.log("Something went wrong when retrieving users.")
+    } else {
+      res.render("userViews/userIndex", {user: user});
+    }
+  });
 });
 
 // ------------ New - user ------------ //
