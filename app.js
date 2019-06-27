@@ -7,6 +7,7 @@ const express = require("express"),
     LocalStrategy = require("passport-local"),
     passportLocalMongoose = require("passport-local-mongoose"),
     flash = require("connect-flash"),
+    methodOverride = require("method-override"),
     User = require("./models/user");
 
 
@@ -32,6 +33,7 @@ mongoose.connect(process.env.DATABASEURL || "mongodb://localhost:27017/INKSite",
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride("_method"));
 app.use(flash());
 app.use(require("express-session")({
     secret: "secret",

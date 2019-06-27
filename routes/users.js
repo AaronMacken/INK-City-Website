@@ -44,6 +44,24 @@ router.post("/", (req, res) => {
   });
 });
 
+// ------------ Add Friend Route - Push a user reference to currentUser's friends array ------------ //
+router.post("/newFriend", (req, res) => {
+  // Find the currently logged in user
+  User.findById(req.user._id, (err, user) => {
+    if(err){
+      console.log(err);
+    } else {
+      // console.log("Current User: " + req.user._id)
+      // console.log("Sent user ID: " + req.body.newFriend.id);
+      // push to the currently logged in user's array of friends
+      // the ID of the user we wish to follow.
+      user.friends.push(req.body.newFriend.id);
+      user.save();
+      res.redirect("/users/" + req.user._id);
+    }
+  });
+});
+
 
 // ------------ Show - user ------------ //
 router.get("/:id", (req, res) => {
@@ -62,26 +80,23 @@ router.get("/:id", (req, res) => {
 
 
 // ------------ Edit - user ------------ //
+// The edit route (show update form) is included as a modal on the userShow page.
 
 // ------------ Update - user ------------ //
-
-// ------------ Add Friend Route - Push a user reference to currentUser's friends array ------------ //
-router.post("/newFriend", (req, res) => {
-  // Find the currently logged in user
-  User.findById(req.user._id, (err, user) => {
-    if(err){
+router.put("/:id", (req, res) => {
+  let userUpdates = {
+    profilePictureURL: req.body.userInfo.profilePictureURL,
+    about: req.body.userInfo.about
+  }
+  User.findByIdAndUpdate(req.params.id, userUpdates, (err, updatedUser) => {
+    if(err) {
       console.log(err);
     } else {
-      // console.log("Current User: " + req.user._id)
-      // console.log("Sent user ID: " + req.body.newFriend.id);
-      // push to the currently logged in user's array of friends
-      // the ID of the user we wish to follow.
-      user.friends.push(req.body.newFriend.id);
-      user.save();
-      res.redirect("/users/" + req.user._id);
+      res.redirect("/users/" + req.params.id);
     }
   });
 });
+
 
 // ------------ Destroy - user ------------ //
 

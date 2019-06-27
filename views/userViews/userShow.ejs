@@ -96,22 +96,17 @@
         <span class="close">&times;</span>
         <h2 class="modalTitle">Update Profile</h2>
         
-        <form action="" method="POST"></form>
+        <form action="/users/<%= user._id %>?_method=PUT" method="POST">
           <div class="formWrapper">
             <div>
               <label for="profilePictureURL" class="modalLabel">Profile pic img url</label>
-              <input class="modalInput"type="text" name="profilePictureURL" id="profilePictureURL" placeholder="Ex - https://i.imgur.com/VjEkJdI.jpg"/> 
+              <input name="userInfo[profilePictureURL]" value="<%= user.profilePictureURL %>" placeholder="Ex - https://i.imgur.com/VjEkJdI.jpg" type="text" id="profilePictureURL" class="modalInput"/> 
             </div>
-
             <div>
               <label for="about" class="modalLabel">About</label>
-              <textarea name="about" id="about" placeholder="Write something about yourself!"></textarea>
+              <textarea name="userInfo[about]" placeholder="Write something about yourself!" id="about"> <%= user.about %></textarea>
             </div>
-
-          
-        
             <input type="submit" class="btn btn-full" id="modalSubmit"></input>
-             
           </div>
         </form>  
         
