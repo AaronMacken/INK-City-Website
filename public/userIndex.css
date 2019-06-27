@@ -42,8 +42,17 @@ body, html {
     grid-template-columns: 1fr 1fr;
 }
 
-.titleAddGrid i {
+.titleAddGrid form {
     justify-self: end;
+}
+
+.titleAddGrid button {
+    color: #555555;
+    background-color: transparent;
+    border: none;
+}
+
+.titleAddGrid i {
     transition: 0.2s;
 }
 
@@ -54,3 +63,7 @@ body, html {
 .titleAddGrid i:active {
     color: #8e44ad;
 }
+/* 
+.formValueInput {
+    display: none;
+} */

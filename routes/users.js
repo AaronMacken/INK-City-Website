@@ -65,6 +65,19 @@ router.get("/:id", (req, res) => {
 
 // ------------ Update - user ------------ //
 
+// ------------ Add Friend Route - Push a user reference to currentUser's friends array ------------ //
+router.post("/newFriend", (req, res) => {
+  User.findById(req.user._id, (err, user) => {
+    if(err){
+      console.log(err);
+    } else {
+      let newFriend = req.body.newFriend;
+      // figure out how to push this to our friends array
+    }
+  });
+  
+});
+
 // ------------ Destroy - user ------------ //
 
 module.exports = router;
