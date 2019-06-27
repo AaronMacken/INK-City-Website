@@ -64,9 +64,10 @@
                 <ul class="list">
                   <!------------------------------------------ get info from juicer to put data in here ------------------------------------------------>
                   <% if(user.following.length == 0) { %>
-                    <li>Not following anyone yet!</li> <i class="fas fa-times"></i>
+                    <li>Not following anyone yet! <i class="fas fa-times"></i></li> 
+                    <li>Not following anyone yet! <i class="fas fa-times"></i></li> 
                   <% } else { %>
-                    <li>Put Juicer Data Here</li> <i class="fas fa-times"></i>
+                    <li>Put Juicer Data Here <i class="fas fa-times"></i></li> 
                   <% } %>
                   
                 </ul>
@@ -75,10 +76,10 @@
               <div id="Friends" class="tabcontent">
                 <ul class="list">
                     <% if(user.friends.length == 0) { %>
-                      <li>No friends yet ): </li> <i class="fas fa-times"></i>
+                      
                     <% } else { %>
                       <% user.friends.forEach((friend) => { %>
-                        <li><%= friend.username %></li> <i class="fas fa-times"></i>
+                        <li><%= friend.username %> <i class="fas fa-times"></i></li> 
                       <% }); %>
                       
                     <% } %>
