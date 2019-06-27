@@ -55,8 +55,13 @@ router.post("/newFriend", (req, res) => {
       // console.log("Sent user ID: " + req.body.newFriend.id);
       // push to the currently logged in user's array of friends
       // the ID of the user we wish to follow.
-      user.friends.push(req.body.newFriend.id);
-      user.save();
+      // user.friends.push(req.body.newFriend.id);
+      // user.save();
+      if(user.friends.includes(req.body.newFriend.id)){
+        console.log("True")
+      } else {
+        console.log("false");
+      }
       res.redirect("/users/" + req.user._id);
     }
   });
