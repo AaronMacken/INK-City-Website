@@ -77,7 +77,10 @@
                     <% if(user.friends.length == 0) { %>
                       <li>No friends yet ): </li> <i class="fas fa-times"></i>
                     <% } else { %>
-                      <li>Put Friend Data Here</li> <i class="fas fa-times"></i>
+                      <% user.friends.forEach((friend) => { %>
+                        <li><%= friend.username %></li> <i class="fas fa-times"></i>
+                      <% }); %>
+                      
                     <% } %>
                 </ul>
               </div>

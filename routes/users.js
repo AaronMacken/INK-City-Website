@@ -49,7 +49,7 @@ router.post("/", (req, res) => {
 router.get("/:id", (req, res) => {
   // Find user based off of req.params.id that is passed in through the nav profile button
   // Nav profile button uses currentUser._id which is coming from res.locals statement in app.js
-  User.findById(req.params.id).populate("following").exec((err, foundUser) => {
+  User.findById(req.params.id).populate("friends").exec((err, foundUser) => {
     if(err){
       // ---------------------------------------------------- CREATE A MIDDLEWARE HERE -------------------------------------------------- //
       console.log(err);
@@ -67,15 +67,20 @@ router.get("/:id", (req, res) => {
 
 // ------------ Add Friend Route - Push a user reference to currentUser's friends array ------------ //
 router.post("/newFriend", (req, res) => {
+  // Find the currently logged in user
   User.findById(req.user._id, (err, user) => {
     if(err){
       console.log(err);
     } else {
-      let newFriend = req.body.newFriend;
-      // figure out how to push this to our friends array
+      // console.log("Current User: " + req.user._id)
+      // console.log("Sent user ID: " + req.body.newFriend.id);
+      // push to the currently logged in user's array of friends
+      // the ID of the user we wish to follow.
+      user.friends.push(req.body.newFriend.id);
+      user.save();
+      res.redirect("/users/" + req.user._id);
     }
   });
-  
 });
 
 // ------------ Destroy - user ------------ //
