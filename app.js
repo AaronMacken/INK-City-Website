@@ -27,8 +27,6 @@ mongoose.connect(process.env.DATABASEURL || "mongodb://localhost:27017/INKSite",
     console.log("Error", err.message);
 });
 
-
-
 // App Configure //
 app.set("view engine", "ejs");
 app.use(express.static(__dirname + "/public"));

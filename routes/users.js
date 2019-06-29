@@ -62,6 +62,14 @@ router.post("/newFriend", (req, res) => {
   });
 });
 
+// ------------ Delete Friend Route ------------ //
+router.post("/yeetFriend/:friendId", (req, res) => {
+  User.findById(req.user._id, (err, user) => {
+    user.friends.remove(req.params.friendId);
+    user.save();
+    res.redirect("/users/" + req.user._id);
+  });
+});
 
 // ------------ Show - user ------------ //
 router.get("/:id", (req, res) => {
