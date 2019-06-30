@@ -69,3 +69,8 @@ body, html {
 .formValueInput {
     display: none;
 }
+
+button {
+    background: transparent;
+    border: none;
+}

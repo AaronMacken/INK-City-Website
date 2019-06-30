@@ -293,3 +293,8 @@ textarea {
   margin-top: 5px;
   cursor: pointer;
 }
+
+form button {
+    background: transparent;
+    border: none;
+}
