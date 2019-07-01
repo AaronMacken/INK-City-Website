@@ -119,6 +119,10 @@ img {
   justify-content: flex-end;
 }
 
+.formValueInput {
+  display: none;
+}
+
 .card-follow-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;

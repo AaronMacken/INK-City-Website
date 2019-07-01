@@ -40,7 +40,11 @@
                         <% if(currentUser.friends.includes(user._id)) { %>
                           <i class="fas fa-user-minus"></i>
                         <% } else { %>
-                          <i class="fas fa-user-plus"></i>
+                          <!-- Form to send add friend request -->
+                          <form action="/users/newFriend" method="POST">
+                            <input type="text" name="newFriend[id]" value="<%= user._id%>" class="formValueInput" readonly="readonly">                
+                            <button><i class="fas fa-user-plus"></i></button>
+                          </form>
                         <% } %>
                       </div>
                     <% } %>
