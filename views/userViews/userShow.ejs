@@ -36,9 +36,12 @@
                       <!-- Other user div icons -->
                       <div class="aboutDivRight">
                         <!-- If the current user has already added the displayed user
-                              show the unfollow icon, else, show the follow icon -->
+                              show the unfollow form, else, show the follow form -->
                         <% if(currentUser.friends.includes(user._id)) { %>
-                          <i class="fas fa-user-minus"></i>
+                          <form action="/users/yeetFriend/<%= user._id %>?_method=DELETE"" method="POST">
+                            <button><i class="fas fa-user-minus"></i></button>
+                          </form>
+                          
                         <% } else { %>
                           <!-- Form to send add friend request -->
                           <form action="/users/newFriend" method="POST">
