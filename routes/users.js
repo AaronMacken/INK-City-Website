@@ -57,7 +57,8 @@ router.post("/newFriend", (req, res) => {
       // the ID of the user we wish to follow.
       user.friends.push(req.body.newFriend.id);
       user.save();
-      res.redirect("/users");
+      // Redirect user to the page the request was sent from
+      res.redirect("back");
     }
   });
 });
