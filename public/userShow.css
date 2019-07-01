@@ -177,9 +177,9 @@ img {
   border-top-right-radius: 3px;
 }
 
-.delfrbtn {
-  
-} 
+/* .delfrbtn {
+  display: none;
+}  */
 
 /* Create an active/current tablink class */
 .tab button.active {

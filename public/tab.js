@@ -52,6 +52,7 @@ window.onclick = function(event) {
 };
 
 // =========================================  TOGGLE HIDE SHOW DEL FRIEND BTN =========================================  //
+
 function myFunction() {
   var delBtn = document.querySelectorAll(".delfrbtn");
   for (var i = 0; i < delBtn.length; i++) {
