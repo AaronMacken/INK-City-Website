@@ -100,7 +100,7 @@
                       
                     <% } else { %>
                       <% user.friends.forEach((friend) => { %>
-                        <form action="/users/yeetFriend/<%= friend._id %>" method="POST">
+                        <form action="/users/yeetFriend/<%= friend._id %>?_method=DELETE"" method="POST">
                           <li><%= friend.username %>
                             <% if(currentUser && user._id.equals(currentUser._id)) { %>
                              <button class="delfrbtn" style="display: none;"><i class="fas fa-times"></i></button>

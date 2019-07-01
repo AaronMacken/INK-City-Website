@@ -64,14 +64,12 @@ router.post("/newFriend", (req, res) => {
 });
 
 // ------------ Delete Friend Route ------------ //
-router.post("/yeetFriend/:friendId", (req, res) => {
+router.delete("/yeetFriend/:friendId", (req, res) => {
   User.findById(req.user._id, (err, user) => {
     req.flash("success", "Friend removed.");
     user.friends.remove(req.params.friendId);
     user.save();
-    
-
-    res.redirect("/users/" + req.user._id);
+    res.redirect("back");
   });
 });
 
