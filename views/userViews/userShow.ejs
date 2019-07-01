@@ -27,7 +27,11 @@
                     <p>About</p>
                     <!-- Open modal through Icon -->
                     <% if(currentUser && user._id.equals(currentUser._id)) { %>
-                      <i id="myBtn" class="fas fa-user-edit"></i>
+                      <div id="aboutDivRight">
+                        <i id="myBtn" class="fas fa-user-edit"></i>
+                        <i class="fas fa-user-minus"></i>
+                      </div>
+                      
                     <% } %>
                     
                   </div>
