@@ -29,7 +29,7 @@
                     <% if(currentUser && user._id.equals(currentUser._id)) { %>
                       <div id="aboutDivRight">
                         <i id="myBtn" class="fas fa-user-edit"></i>
-                        <i class="fas fa-user-minus"></i>
+                        <i onclick="myFunction()" class="fas fa-user-minus"></i>
                       </div>
                       
                     <% } %>
@@ -86,19 +86,14 @@
                       
                     <% } else { %>
                       <% user.friends.forEach((friend) => { %>
-
-                        
                         <form action="/users/yeetFriend/<%= friend._id %>" method="POST">
                           <li><%= friend.username %>
                             <% if(currentUser && user._id.equals(currentUser._id)) { %>
-                             <button><i class="fas fa-times"></i></button>
+                             <button class="delfrbtn"><i class="fas fa-times"></i></button>
                             <% } %>
                             </li>
                         </form>
-                        
-
                       <% }); %>
-                      
                     <% } %>
                 </ul>
               </div>
