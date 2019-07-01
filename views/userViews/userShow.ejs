@@ -83,9 +83,13 @@
                     <% } else { %>
                       <% user.friends.forEach((friend) => { %>
 
-
+                        
                         <form action="/users/yeetFriend/<%= friend._id %>" method="POST">
-                          <li><%= friend.username %> <button><i class="fas fa-times"></i></button></li>
+                          <li><%= friend.username %>
+                            <% if(currentUser && user._id.equals(currentUser._id)) { %>
+                             <button><i class="fas fa-times"></i></button>
+                            <% } %>
+                            </li>
                         </form>
                         
 
