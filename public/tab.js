@@ -63,3 +63,13 @@ function myFunction() {
     }
   }
 }
+
+// ========================================= Style  =========================================  //
+
+var alert = document.querySelector(".alert");
+var profileSection = document.querySelector("#profileSection");
+if(alert) {
+  alert.style.marginTop = "60px";
+  profileSection.style.paddingTop = "0";
+  console.log("alert");
+}
