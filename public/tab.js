@@ -35,9 +35,13 @@ var btn = document.getElementById("myBtn");
 var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks on the button, open the modal
-btn.onclick = function() {
+var editBtn = document.querySelector(".fa-user-edit");
+if(editBtn) {
+  btn.onclick = function() {
   modal.style.display = "block";
-};
+  };
+}
+
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function() {
@@ -68,8 +72,8 @@ function myFunction() {
 
 var alert = document.querySelector(".alert");
 var profileSection = document.querySelector("#profileSection");
+
 if(alert) {
   alert.style.marginTop = "60px";
   profileSection.style.paddingTop = "0";
-  console.log("alert");
 }

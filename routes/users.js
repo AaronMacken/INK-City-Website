@@ -58,6 +58,7 @@ router.post("/newFriend", (req, res) => {
       user.friends.push(req.body.newFriend.id);
       user.save();
       // Redirect user to the page the request was sent from
+      req.flash("success", "Friend added.")
       res.redirect("back");
     }
   });
