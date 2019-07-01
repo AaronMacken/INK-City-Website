@@ -21,8 +21,17 @@ function openTab(evt, tabName) {
   }
   
   // Get the element with id="defaultOpen" and select it
-  document.getElementById("defaultOpen").click();
   
+  document.getElementById("defaultOpen").click();
+
+
+
+
+
+
+
+
+
 
 // =========================================  MODAL =========================================  //
 // Get the modal

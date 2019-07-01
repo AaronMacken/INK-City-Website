@@ -26,7 +26,10 @@
                   <div class="card-about">
                     <p>About</p>
                     <!-- Open modal through Icon -->
-                    <i id="myBtn" class="fas fa-user-edit"></i>
+                    <% if(currentUser && user._id.equals(currentUser._id)) { %>
+                      <i id="myBtn" class="fas fa-user-edit"></i>
+                    <% } %>
+                    
                   </div>
                   
                   <p class="card-user-description">
@@ -54,7 +57,7 @@
                 <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Following')">
                   Following
                 </button>
-                <button class="tablinks" id="btnRight" onclick="openTab(event, 'Friends')">
+                <button class="tablinks" onclick="openTab(event, 'Friends')">
                   Friends
                 </button>
               </div>
