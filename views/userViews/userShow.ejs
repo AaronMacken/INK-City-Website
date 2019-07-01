@@ -25,15 +25,25 @@
                 <div class="card-content">
                   <div class="card-about">
                     <p>About</p>
-                    <!-- Open modal through Icon -->
+                    <!-- Open modal through Icon --> 
                     <% if(currentUser && user._id.equals(currentUser._id)) { %>
-                      <div id="aboutDivRight">
+                      <!-- Current user control icons -->
+                      <div class="aboutDivRight">
                         <i id="myBtn" class="fas fa-user-edit"></i>
                         <i onclick="myFunction()" class="fas fa-user-minus"></i>
                       </div>
-                      
+                    <% } else { %>
+                      <!-- Other user div icons -->
+                      <div class="aboutDivRight">
+                        <!-- If the current user has already added the displayed user
+                              show the unfollow icon, else, show the follow icon -->
+                        <% if(currentUser.friends.includes(user._id)) { %>
+                          <i class="fas fa-user-minus"></i>
+                        <% } else { %>
+                          <i class="fas fa-user-plus"></i>
+                        <% } %>
+                      </div>
                     <% } %>
-                    
                   </div>
                   
                   <p class="card-user-description">
