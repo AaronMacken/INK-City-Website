@@ -37,7 +37,7 @@
                       <div class="aboutDivRight">
                         <!-- If the current user has already added the displayed user
                               show the unfollow form, else, show the follow form -->
-                        <% if(currentUser.friends.includes(user._id)) { %>
+                        <% if(currentUser && currentUser.friends.includes(user._id)) { %>
                           <form action="/users/yeetFriend/<%= user._id %>?_method=DELETE"" method="POST">
                             <button><i class="fas fa-user-minus"></i></button>
                           </form>
