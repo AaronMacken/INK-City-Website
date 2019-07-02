@@ -1,7 +1,8 @@
 // Require Package Vars
 const express = require("express"),
     router = express.Router(),
-    passport = require("passport");
+    passport = require("passport"),
+    middleware = require("../middleware");
 
 
 // ------------ Basic Routes ------------ //
@@ -24,7 +25,7 @@ router.get("/indexJuicer", (req, res) => {
 // ------------ Login Logout Routes ------------ //
 
 // Show login form
-router.get("/login", (req, res) => {
+router.get("/login", middleware.isAlreadyLoggedin, (req, res) => {
     res.render("authViews/login");
 });
 

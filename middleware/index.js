@@ -12,6 +12,16 @@ middlewareObj.isLoggedIn = function(req, res, next) {
     res.redirect("/login");
 }
 
+// Middleware to redirect the login page is user is already signed in
+middlewareObj.isAlreadyLoggedin = function(req, res, next) {
+    if(req.isAuthenticated()) {
+        req.flash("error", "You are already signed in.");
+        res.redirect("/indexJuicer");
+    } else {
+        return next();
+    }
+}
+
 
 // Export the middleware object to be required and used in different files
 module.exports = middlewareObj;
