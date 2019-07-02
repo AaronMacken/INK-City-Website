@@ -3,6 +3,28 @@ var User = require("../models/user");
 // Add middleware here
 var middlewareObj = {};
 
+// Middleware to check user ownership before modifying user data or friends
+
+middlewareObj.checkUserOwnership = function(req, res, next) {
+    if(req.isAuthenticated()) {
+        User.findById(req.params.id, (err, foundUser) => {
+            if(err) {
+                req.flash("error", "You do not have permission to do that.");
+                res.redirect("back");
+            } else {
+                if(foundUser._id.equals(req.user._id)) {
+                    next();
+                } else {
+                    res.redirect("back");
+                }
+            }
+        });
+    } else {
+        req.flash("error", "You need to be signed in to do that.");
+        res.redirect("back");
+    }
+}
+
 // Middleware to ensure user is logged in before performing user actions
 middlewareObj.isLoggedIn = function(req, res, next) {
     if(req.isAuthenticated()) {

@@ -18,12 +18,12 @@ router.get("/", (req, res) => {
 });
 
 // ------------ New - user ------------ //
-router.get("/new", (req, res) => {
+router.get("/new", middleware.isAlreadyLoggedin, (req, res) => {
   res.render("authViews/register");
 });
 
 // ------------ Create - user ------------ //
-router.post("/", (req, res) => {
+router.post("/", middleware.isAlreadyLoggedin, (req, res) => {
   // New user var w/ username & email contents, obtained from body-parser (req.body)
   var newUser = new User({
     username: req.body.username,
@@ -91,19 +91,13 @@ router.get("/:id", (req, res) => {
 // The edit route (show update form) is included as a modal on the userShow page.
 
 // ------------ Update - user ------------ //
-router.put("/:id", (req, res) => {
+router.put("/:id", middleware.checkUserOwnership, (req, res) => {
   let userUpdates = {
     profilePictureURL: req.body.userInfo.profilePictureURL,
     about: req.body.userInfo.about
   }
-  User.findByIdAndUpdate(req.params.id, userUpdates, (err, updatedUser) => {
-    if(err) {
-      console.log(err);
-    } else {
+  User.findByIdAndUpdate(req.params.id, userUpdates, (updatedUser) => {
       res.redirect("/users/" + req.params.id);
-    }
   });
 });
-
-
 module.exports = router;
