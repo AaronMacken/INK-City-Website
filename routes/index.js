@@ -41,7 +41,7 @@ passport.authenticate("local", {
 }), (req, res) => {});
 
 // Logout route
-router.get("/logout", (req, res) => {
+router.get("/logout", middleware.isLoggedOut, (req, res) => {
     // Flash message upon logout. 
     req.flash("success", "See you next time " + req.user.username + ".");
     // use passport's logout function.

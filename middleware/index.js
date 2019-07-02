@@ -22,6 +22,15 @@ middlewareObj.isAlreadyLoggedin = function(req, res, next) {
     }
 }
 
+// Middleware to redirect logged out users if a request hits the logout route
+middlewareObj.isLoggedOut = function(req, res, next) {
+    if(!req.isAuthenticated()) {
+        req.flash("error", "You are already signed out.");
+        res.redirect("/login");
+    }else {
+        return next();
+    }
+}
 
 // Export the middleware object to be required and used in different files
 module.exports = middlewareObj;
