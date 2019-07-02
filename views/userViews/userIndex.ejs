@@ -32,7 +32,7 @@
           <div class="titleAddGrid">
             <a href="/users/<%= foundUser._id %>"><p><%= foundUser.username %></p></a> 
             <!-- The icon is also an href to add the clicked user to the current user friends list -->
-            <% if(currentUser._id.equals(foundUser._id) || currentUser.friends.includes(foundUser._id)) { <!-- Do not add form / Do nothing --> %>
+            <% if(currentUser && currentUser._id.equals(foundUser._id) ||currentUser && currentUser.friends.includes(foundUser._id)) { <!-- Do not add form / Do nothing --> %>
             <% } else { %>
               <form action="/users/newFriend" method="POST">
                 <input type="text" name="newFriend[id]" value="<%= foundUser._id%>" class="formValueInput" readonly="readonly">                
