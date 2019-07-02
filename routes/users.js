@@ -49,19 +49,15 @@ router.post("/", (req, res) => {
 router.post("/newFriend", middleware.isLoggedIn, (req, res) => {
   // Find the currently logged in user
   User.findById(req.user._id, (err, user) => {
-    if(err){
-      console.log(err);
-    } else {
-      // console.log("Current User: " + req.user._id)
-      // console.log("Sent user ID: " + req.body.newFriend.id);
-      // push to the currently logged in user's array of friends
-      // the ID of the user we wish to follow.
-      user.friends.push(req.body.newFriend.id);
-      user.save();
-      // Redirect user to the page the request was sent from
-      req.flash("success", "Friend added.");
-      res.redirect("back");
-    }
+    // console.log("Current User: " + req.user._id)
+    // console.log("Sent user ID: " + req.body.newFriend.id);
+    // push to the currently logged in user's array of friends
+    // the ID of the user we wish to follow.
+    user.friends.push(req.body.newFriend.id);
+    user.save();
+    // Redirect user to the page the request was sent from
+    req.flash("success", "Friend added.");
+    res.redirect("back");
   });
 });
 
@@ -81,8 +77,8 @@ router.get("/:id", (req, res) => {
   // Nav profile button uses currentUser._id which is coming from res.locals statement in app.js
   User.findById(req.params.id).populate("friends").exec((err, foundUser) => {
     if(err){
-      // ---------------------------------------------------- CREATE A MIDDLEWARE HERE -------------------------------------------------- //
-      console.log(err);
+      req.flash("error", "User not found.");
+      res.redirect("/users");
     } else {
       // render profile page and pass in dynamically loaded data from returned DB object
       res.render("userViews/userShow", {user:foundUser});
