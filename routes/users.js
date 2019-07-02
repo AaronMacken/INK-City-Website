@@ -1,7 +1,8 @@
 // Require Package Vars
 const express = require("express"),
   router = express.Router(),
-  User = require("../models/user");
+  User = require("../models/user"),
+  middleware = require("../middleware");
 
 // ------------ Restful Routes - User ------------ //
 
@@ -45,7 +46,7 @@ router.post("/", (req, res) => {
 });
 
 // ------------ Add Friend Route - Push a user reference to currentUser's friends array ------------ //
-router.post("/newFriend", (req, res) => {
+router.post("/newFriend", middleware.isLoggedIn, (req, res) => {
   // Find the currently logged in user
   User.findById(req.user._id, (err, user) => {
     if(err){
@@ -58,7 +59,7 @@ router.post("/newFriend", (req, res) => {
       user.friends.push(req.body.newFriend.id);
       user.save();
       // Redirect user to the page the request was sent from
-      req.flash("success", "Friend added.")
+      req.flash("success", "Friend added.");
       res.redirect("back");
     }
   });
