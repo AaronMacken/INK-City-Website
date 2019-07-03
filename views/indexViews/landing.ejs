@@ -360,56 +360,35 @@
 
     <section class="sectionForm">
       <div class="row">
-        <h2>Provide us some feedback!</h2>
+        <h2>Email the developer!</h2>
       </div>
 
       <div class="row">
         <!-- label for attr links up with input's id, click the label and be redirected to the correct input -->
-        <form action="" method="POST">
+        <form class="gform" action="https://script.google.com/macros/s/AKfycbx_vyPL3BbyXTiOnb2RPmVbIst0_h6Z-NKE4k42jA/exec" method="POST">
           <div class="formGrid">
             <label for="name">Name</label>
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Enter your name"
-              required
-            />
-
+            <input type="text" name="name" id="name" placeholder="Enter your name" required/>
+    
             <label for="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your email"
-              required
-            />
-
-            <label for="find-us">How did you find us?</label>
-            <select name="find-us" id="find-us">
-              <option value="friends">Friends</option>
-              <option value="search">Search Engine</option>
-              <option value="ad">Advertisement</option>
-              <option value="other">Other</option>
-            </select>
-
-            <label for="news-letter">Click to recieve emails.</label>
-            <div>
-              <input type="checkbox" name="news" id="news-letter" checked />
-              Yes, please!
-            </div>
-
-            <label for="comment">Let us know how we're doing!</label>
-            <textarea
-              name="comment"
-              id="comment"
-              placeholder="Your comments here"
-            ></textarea>
+            <input  type="email" name="email" id="email" placeholder="Enter your email" required/>
+             
+            
+            <label for="message">Reach out or share your thoughts!</label>
+            <textarea name="message" id="message" placeholder="Your comments here"></textarea>
 
             <div id="formPlaceHolder">&nbsp;</div>
-            <input type="submit" value="Send!" id="submitButton" />
+            <input type="submit" value="Send!" id="submitButton"/>
+
+          </div>
+
+          <!-- Thank you message -->
+          <div style="display:none" class="thankyou_message">
+            <h3>Email Sent</h3>
           </div>
         </form>
+
+        
       </div>
     </section>
 
@@ -445,4 +424,5 @@
       </div>
     </footer>
 
+    <script data-cfasync="false" type="text/javascript" src="/form-submission-handler.js"></script>
     <% include ../partials/footer %>

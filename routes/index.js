@@ -22,6 +22,7 @@ router.get("/indexJuicer", (req, res) => {
     res.render("indexViews/indexJuicer");
 });
 
+
 // ------------ Login Logout Routes ------------ //
 
 // Show login form
