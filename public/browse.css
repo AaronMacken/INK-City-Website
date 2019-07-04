@@ -4,10 +4,8 @@ body, html {
 
 .browseGrid {
     width: 75%;
-    height: 90vh;
-    overflow: hidden;
-    margin: auto auto;
     display: grid;
+    margin: 40vh auto auto auto;
     grid-template-columns: 1fr 1fr;
     align-items: center;
     text-align: center;
@@ -37,4 +35,10 @@ li a:visited {
 li a:hover,
 li a:active {
     border-bottom: 2px solid #8e44ad;
-  }
+}
+
+@media only screen and (max-height: 500px) {
+    .browseGrid {
+        margin: 20vh auto;
+    }
+}
