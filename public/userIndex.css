@@ -6,6 +6,8 @@ body, html {
     background-color: #1d1d1d;
     height: 75vh;
     width: 30vw;
+    min-width: 400px;
+    min-height: 400px;
     margin: 0 auto 0 auto;
     overflow: auto;
     border-radius: 3px;
@@ -22,7 +24,7 @@ body, html {
     object-fit: cover;
     border-radius: 50px;
     margin-right: 10px;
-    float: left;
+    float: left; 
 }
 
 .userDiv p {
@@ -31,7 +33,7 @@ body, html {
     display: inline-block;
 }
 
-.userDiv a{
+.userDiv a {
     border-bottom: none;
 }
 
@@ -73,4 +75,28 @@ body, html {
 button {
     background: transparent;
     border: none;
+}
+
+@media only screen and (max-width: 650px){
+    section.userIndexSection {
+        padding: 5%;
+    }
+}
+
+
+@media only screen and (max-width: 450px) {
+    .userIndexWrapper {
+        min-width: 250px;
+        min-height: 250px;
+    }
+
+    p.about {
+        display: none;
+    }
+
+    div.titleAddGrid {
+        height: 50px;
+        align-items: center;
+        padding-bottom: 5px;
+    }
 }
