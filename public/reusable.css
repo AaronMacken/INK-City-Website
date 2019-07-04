@@ -268,7 +268,7 @@
   }
   
 /* Styling for navbar transition */
-  @media(max-width: 580px) {
+  @media(max-width: 650px) {
     .logo {
         position: fixed;
         top: 0;

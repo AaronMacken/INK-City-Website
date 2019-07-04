@@ -403,6 +403,10 @@ cite img {
   text-align: left;
 }
 
+.formGrid label {
+  font-weight: 900;
+}
+
 input[type="text"],
 input[type="email"],
 select,
