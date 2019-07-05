@@ -9,13 +9,15 @@ html, body {
     display: block;
     text-align: center;
     font-size: 90%;
+    margin: auto;
+    height: 90vh;
+    width: 100vw;
+    overflow: hidden;
 }
-
 form {
     display: inline-block;
     text-align: center;
-    height: 50vh;
-    margin: 5vh auto 10vh auto;
+    transform: translateY(10vh);
 }
 
 form h2 {
@@ -45,4 +47,14 @@ input {
     justify-self: center;
     margin-right: 0;
     padding: 0;
+}
+
+@media only screen and (max-width: 650px){
+    form {
+        transform: translateY(2vh);
+        margin: 0;
+    }
+    input {
+        min-width: 200px;
+    }
 }

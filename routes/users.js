@@ -37,7 +37,7 @@ router.post("/", middleware.isAlreadyLoggedin, (req, res) => {
       // a flash message if an error occurs in the registration process.
       req.flash("error", "Username or e-mail may already be in use.");
       // Redirect user back to the register form
-      return res.redirect("/register");
+      return res.redirect("back");
     }
     // Welcome user with flash message and direct them to login page.
     req.flash("success", "Welcome to the community! Please sign in.");
