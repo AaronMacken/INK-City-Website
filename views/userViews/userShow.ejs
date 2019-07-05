@@ -88,8 +88,7 @@
                 <ul class="list">
                   <!------------------------------------------ get info from juicer to put data in here ------------------------------------------------>
                   <% if(user.following.length == 0) { %>
-                    <li>Not following anyone yet! <i class="fas fa-times"></i></li> 
-                    <li>Not following anyone yet! <i class="fas fa-times"></i></li> 
+                    <p>Not following anyone yet.</p>
                   <% } else { %>
                     <li>Put Juicer Data Here <i class="fas fa-times"></i></li> 
                   <% } %>
@@ -142,5 +141,6 @@
   </div>
 
   <script src="/tab.js"></script>
+  <script src="/alertProfile.js"></script>
   <% include ../partials/footer %>
 
