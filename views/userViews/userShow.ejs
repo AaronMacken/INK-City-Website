@@ -75,12 +75,13 @@
     
               <!-- Tab Links -->
               <div class="tab">
-                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Following')">
-                  Following
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'Friends')">
+                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'Friends')">
                   Friends
                 </button>
+                <button class="tablinks" onclick="openTab(event, 'Following')">
+                  Following
+                </button>
+                
               </div>
     
               <!-- Tab content -->
@@ -88,9 +89,9 @@
                 <ul class="list">
                   <!------------------------------------------ get info from juicer to put data in here ------------------------------------------------>
                   <% if(user.following.length == 0) { %>
-                    <p>Not following anyone yet.</p>
+                    <p>Follow artists feature coming soon.</p>
                   <% } else { %>
-                    <li>Put Juicer Data Here <i class="fas fa-times"></i></li> 
+                    
                   <% } %>
                   
                 </ul>
@@ -99,11 +100,11 @@
               <div id="Friends" class="tabcontent">
                 <ul class="list">
                     <% if(user.friends.length == 0) { %>
-                      
+                      Nothing here yet.
                     <% } else { %>
                       <% user.friends.forEach((friend) => { %>
                         <form action="/users/yeetFriend/<%= friend._id %>?_method=DELETE"" method="POST">
-                          <li><%= friend.username %>
+                          <li><a href="/users/<%= friend._id%>" class="userLink"><%= friend.username %></a>
                             <% if(currentUser && user._id.equals(currentUser._id)) { %>
                              <button class="delfrbtn" style="display: none;"><i class="fas fa-times"></i></button>
                             <% } %>
