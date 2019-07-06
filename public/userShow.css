@@ -50,7 +50,7 @@ img {
 
 .card-img-top {
   width: 100%;
-  height: 50%;
+
   -o-object-fit: cover;
   object-fit: cover;
   border-top-left-radius: 0.25rem;
@@ -329,6 +329,11 @@ form button {
 @media only screen and (max-width: 650px) {
   #profileSection {
     padding-top: 0;
+    margin-bottom: 15%;
+  }
+
+  .page-layout-grid {
+    grid-gap: 5%;
   }
   
   .page-layout-grid {
