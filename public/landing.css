@@ -563,6 +563,26 @@ footer p {
   margin-top: -35px;
 }
 
+h2.modalTitle {
+  margin: 10% auto;
+}
+
 h2.modalTitle::after {
   margin-top: 10px;
+}
+
+.close {
+  color: #c4c3c3;
+  font-size: 200%;
+  font-weight: bold;
+  display: inline-block;
+  align-self: flex-end;
+  transition: 0.2s;
+}
+
+.close:hover,
+.close:focus {
+  color: #8e44ad;
+  text-decoration: none;
+  cursor: pointer;
 }
