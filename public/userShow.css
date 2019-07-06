@@ -180,9 +180,6 @@ img {
   border-top-right-radius: 3px;
 }
 
-/* .delfrbtn {
-  display: none;
-}  */
 
 /* Create an active/current tablink class */
 .tab button.active {
@@ -219,6 +216,17 @@ img {
 
 .fa-times:hover {
   color: #8e44ad;
+}
+
+a.userLink {
+  color: #484848;
+  border-bottom: none;
+  transition: 0.2s;
+}
+
+a.userLink:hover {
+  color: #8e44ad;
+  border-bottom: 2px solid #8e44ad;
 }
 
 /* ------------------ Modal Styling ------------------ */
