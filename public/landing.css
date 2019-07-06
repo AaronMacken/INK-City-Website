@@ -586,3 +586,9 @@ h2.modalTitle::after {
   text-decoration: none;
   cursor: pointer;
 }
+
+a#githubLink {
+  border-bottom: none;
+  font-size: 150%;
+  color: #fff;
+}
