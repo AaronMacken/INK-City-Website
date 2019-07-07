@@ -137,6 +137,7 @@
   }
 
   .signUpGrid {
+    min-width: 300px;
     grid-template-columns: 1fr;
     width: 70%;
     grid-gap: 2%;
