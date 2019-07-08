@@ -17,7 +17,8 @@ html, body {
 form {
     display: inline-block;
     text-align: center;
-    transform: translateY(10vh);
+    -webkit-transform: translateY(10vh);
+            transform: translateY(10vh);
 }
 
 form h2 {
@@ -51,7 +52,8 @@ input {
 
 @media only screen and (max-width: 650px){
     form {
-        transform: translateY(2vh);
+        -webkit-transform: translateY(2vh);
+                transform: translateY(2vh);
         margin: 0;
     }
     input {
