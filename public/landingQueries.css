@@ -1,7 +1,6 @@
 /* Big tablet to 1200px (widths smaller than the 1140 px row */
 @media only screen and (max-width: 1200px) {
   .intro-text-box {
-    width: 100%;
     padding: 0 2%;
   }
 
