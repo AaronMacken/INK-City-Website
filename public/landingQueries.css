@@ -175,4 +175,10 @@
   .intro-text-box h1 {
     font-size: 150%;
   }
+
+  .btn-full:link,
+  .btn-full:visited,
+  input[type="submit"] {
+    margin-right: 0;
+  }
 }
